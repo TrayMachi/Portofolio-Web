@@ -8,20 +8,20 @@ Styling using TailwindCSS and little bit of SCSS for pseudo purpose.
 Library:
 
 Scrolling Library:
-Locomotive Scroll v5        : https://scroll.locomotive.ca/
-Lenis Scroll                : https://lenis.studiofreight.com/
-AOS                         : https://michalsnik.github.io/aos/
+1. Locomotive Scroll v5 : https://scroll.locomotive.ca/
+2. Lenis Scroll         : https://lenis.studiofreight.com/
+3. AOS                  : https://michalsnik.github.io/aos/
 
 Animation Library:
-Framer Motion               : https://www.framer.com/motion/
-GSAP                        : https://gsap.com/
-TypedJs                     : https://mattboldt.com/demos/typed-js/
+1. Framer Motion        : https://www.framer.com/motion/
+2. GSAP                 : https://gsap.com/
+3. TypedJs              : https://mattboldt.com/demos/typed-js/
 
 Icons Library: 
-React-Icons                 : https://react-icons.github.io/react-icons/
+1. React-Icons          : https://react-icons.github.io/react-icons/
 
 UI Template:
-Headless UI                 : https://headlessui.com/
+1. Headless UI          : https://headlessui.com/
 
 Auto Send Email:
-EmailJs                     : https://www.emailjs.com/
+1. EmailJs              : https://www.emailjs.com/
