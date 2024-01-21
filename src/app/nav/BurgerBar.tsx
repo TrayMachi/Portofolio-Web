@@ -63,7 +63,7 @@ const Index: React.FC<NavProps> = ({ onClose }) => {
             <p>Navigation</p>
           </div>
           {navItems.map((data, index) => (
-            <div onClick={onClose}>
+            <div key={index} onClick={onClose}>
               <Link
                 key={index}
                 data={{ ...data, index }}
