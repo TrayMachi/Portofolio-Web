@@ -10,6 +10,7 @@ interface Post {
   altImg: string;
   img: string;
   desc: string;
+  ref: string;
 }
 
 interface Categories {
@@ -31,6 +32,7 @@ const Projects = () => {
         altImg: "Portofolio Website",
         img: "/Project/project1.png",
         desc: "This is my personal portfolio website (yes, you're currently on it), built using Next.js, Typescript, Tailwind CSS, and other external libraries.",
+        ref: "https://github.com/TrayMachi/Portofolio-Web",
       },
     ],
     project2: [
@@ -39,6 +41,7 @@ const Projects = () => {
         altImg: "Template",
         img: "/Project/project2.png",
         desc: "Cuman template banh, saya kurang project :')",
+        ref: "",
       },
     ],
   });
@@ -60,7 +63,7 @@ const Projects = () => {
                 key={post.id}
                 className="bg-gradient-to-br from-[#4625581a] to-[#7c419e21] border border-gray-200 rounded-lg shadow dark:border-gray-700"
               >
-                <a href="#">
+                <a href={post.ref}>
                   <Image
                     className="rounded-t-lg object-fill"
                     src={post.img}
@@ -70,7 +73,7 @@ const Projects = () => {
                   />
                 </a>
                 <div className="p-5">
-                  <a href="#">
+                  <a href={post.ref}>
                     <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
                       {post.altImg}
                     </h5>
