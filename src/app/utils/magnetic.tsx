@@ -10,6 +10,7 @@ const Magnetic: React.FC<MagneticProps> = ({ children }) => {
   const magnetic = useRef<HTMLDivElement | null>(null);
 
   useEffect(() => {
+    if (typeof window !== 'undefined') {
     const xTo = gsap.quickTo(magnetic.current, 'x', { duration: 1, ease: 'elastic.out(1, 0.3)' });
     const yTo = gsap.quickTo(magnetic.current, 'y', { duration: 1, ease: 'elastic.out(1, 0.3)' });
 
@@ -38,6 +39,7 @@ const Magnetic: React.FC<MagneticProps> = ({ children }) => {
         magnetic.current.removeEventListener('mouseleave', handleMouseLeave);
       }
     };
+  }
   }, []);
 
   return React.cloneElement(children, { ref: magnetic });

@@ -17,6 +17,7 @@ const Profile: React.FC = () => {
   const career = useRef<HTMLSpanElement>(null);
 
   useEffect(() => { // useEffect for making animation typing of career
+    if (typeof window !== 'undefined') {
     if (career.current) {
       const typed = new Typed(career.current, {
         strings: ["Fullstack Developer.", "Computer Science Student."],
@@ -31,6 +32,7 @@ const Profile: React.FC = () => {
         typed.destroy();
       };
     }
+  }
   }, []);
 
   return (

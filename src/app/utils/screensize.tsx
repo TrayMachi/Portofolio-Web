@@ -6,6 +6,7 @@ const useScreenSize = (): boolean => {
   const [screenSize, setScreenSize] = useState<boolean>(false);
 
   useEffect(() => {
+    if (typeof window !== 'undefined') {
     const handleResize = () => {
       setScreenSize(window.innerWidth > 1020);
     };
@@ -17,6 +18,7 @@ const useScreenSize = (): boolean => {
     return () => {
       window.removeEventListener("resize", handleResize);
     };
+  }
   }, []); 
 
   return screenSize;

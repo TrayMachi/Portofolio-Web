@@ -44,11 +44,13 @@ const Cards: React.FC<Section> = ({ component: Component, behaviour, id }) => (
 
 const HomePage: React.FC = () => {
   useEffect(() => { // useEffect for transition onscroll using AOS library
+    if (typeof window !== 'undefined') {
     AOS.init({
       delay: 0,
       duration: 600,
       disable: "mobile",
     });
+  }
   }, []);
   // Styling the component based on screensize
   const defaultMX = useScreenSize() ? "mx-52" : "mx-8";
@@ -66,12 +68,15 @@ const HomePage: React.FC = () => {
   };
 
   useEffect(() => {
+    if (typeof window !== 'undefined') {
     if (isActive) setIsActive(false);
+    }
   }, [pathname]);
 
   // For closing the nav if on profile section
   const [isProfileVisible, setIsProfileVisible] = useState(false);
   useEffect(() => {
+    if (typeof window !== 'undefined') {
     const profileContainer = document.getElementById("profile-container");
 
     if (profileContainer) {
@@ -94,12 +99,15 @@ const HomePage: React.FC = () => {
         observer.disconnect();
       };
     }
+  }
   }, []);
 
   useEffect(() => {
+    if (typeof window !== 'undefined') {
     if (isProfileVisible && isActive) {
       setIsActive(false);
     }
+  }
   }, [isProfileVisible, isActive]);
 
   return (

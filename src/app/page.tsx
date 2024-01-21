@@ -9,10 +9,12 @@ import LoadingScreen from "./component/LoadScreen";
 
 export default function Home() {
   useEffect(() => { // useEffect for smooth scrolling
+    if (typeof window !== 'undefined') {
     (async () => {
       const LocomotiveScroll = (await import("locomotive-scroll")).default;
       const locomotiveScroll = new LocomotiveScroll();
     })();
+  }
   }, []);
   return (
     <ReactLenis root>

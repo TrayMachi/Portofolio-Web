@@ -5,7 +5,8 @@ import { ReactLenis } from "@studio-freight/react-lenis";
 import { motion } from "framer-motion";
 
 // Loading screen component
-const Noise = () => { // Making a noise wallpaper
+const Noise = () => {
+  // Making a noise wallpaper
   return (
     <motion.div
       initial={{ transform: "translateX(-10%) translateY(-10%)" }}
@@ -27,7 +28,8 @@ const Noise = () => { // Making a noise wallpaper
 };
 
 const LoadingScreen: React.FC = () => {
-  const words = [ // Words in the loading page
+  const words = [
+    // Words in the loading page
     "Hello",
     "I'm",
     "Tristan",
@@ -38,21 +40,24 @@ const LoadingScreen: React.FC = () => {
     "And",
     "Fullstack Dev",
   ];
-  useEffect(() => { // useEffect and gsap for the animation
-    const tl = gsap.timeline();
-    document.documentElement.style.overflowY = "hidden";
+  useEffect(() => {
+    // useEffect and gsap for the animation
+    if (typeof window !== "undefined") {
+      const tl = gsap.timeline();
+      document.documentElement.style.overflowY = "hidden";
 
-    for (let i = 1; i <= 9; i++) {
-      const wordId = `#word${i}`;
-      tl.to(wordId, { opacity: 1, duration: 0.2, ease: "power1.inOut" });
-      tl.to(wordId, { opacity: 0, duration: 0.2, ease: "power1.inOut" });
+      for (let i = 1; i <= 9; i++) {
+        const wordId = `#word${i}`;
+        tl.to(wordId, { opacity: 1, duration: 0.2, ease: "power1.inOut" });
+        tl.to(wordId, { opacity: 0, duration: 0.2, ease: "power1.inOut" });
+      }
+
+      tl.to("#loadingScreen", { opacity: 0, duration: 1.5 });
+      tl.set("#loadingScreen", { display: "none" });
+      tl.eventCallback("onComplete", () => {
+        document.documentElement.style.overflowY = "auto";
+      });
     }
-
-    tl.to("#loadingScreen", { opacity: 0, duration: 1.5 });
-    tl.set("#loadingScreen", { display: "none" });
-    tl.eventCallback("onComplete", () => {
-      document.documentElement.style.overflowY = "auto";
-    });
   }, []);
 
   return (
