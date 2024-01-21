@@ -1,3 +1,4 @@
+"use client";
 import React, { useRef, FormEvent, useState } from "react";
 import emailjs from "@emailjs/browser";
 import { useScreenSize } from "../utils/screensize";
@@ -38,7 +39,8 @@ const ContactMe = () => {
       Subject : ${!!subject}
       Message : ${!!message}`);
       return;
-    } else if (form.current) { //If success gonna send it to my email and reply em back
+    } else if (form.current) {
+      //If success gonna send it to my email and reply em back
       emailjs
         .sendForm(
           "service_jvc7la9",
