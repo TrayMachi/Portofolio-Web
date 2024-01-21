@@ -44,6 +44,7 @@ const LoadingScreen: React.FC = () => {
     // useEffect and gsap for the animation
     if (typeof window !== "undefined") {
       const tl = gsap.timeline();
+      document.documentElement.style.overflowY = "hidden";
 
       for (let i = 1; i <= 9; i++) {
         const wordId = `#word${i}`;
@@ -53,6 +54,9 @@ const LoadingScreen: React.FC = () => {
 
       tl.to("#loadingScreen", { opacity: 0, duration: 1.5 });
       tl.set("#loadingScreen", { display: "none" });
+      tl.eventCallback("onComplete", () => {
+        document.documentElement.style.overflowY = "auto";
+      });
     }
   }, []);
 
