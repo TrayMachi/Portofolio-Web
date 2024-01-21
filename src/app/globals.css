@@ -2,24 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-light-rgb: #161d2d;
-  --background-start-light-rgb: #e0e5e9;
-  --background-end-light-rgb: #c1c9cf;
-
-  --foreground-dark-rgb: #ffffff;
-  --background-start-dark-rgb: #1a1e2a;
-  --background-end-dark-rgb: #12151f;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground: var(--foreground-dark-rgb);
-    --background-start: var(--background-start-dark-rgb);
-    --background-end: var(--background-end-dark-rgb);
-  }
-}
-
 @media screen and (max-width: 767px) {
   [data-aos] {
     pointer-events: auto !important;
@@ -29,8 +11,7 @@
 }
 
 body {
-  background: linear-gradient(to bottom, var(--background-start), var(--background-end));
-  color: var(--foreground);
+  background-color: #1a1e2a;
 }
 
 

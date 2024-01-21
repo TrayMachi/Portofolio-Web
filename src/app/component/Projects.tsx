@@ -67,8 +67,8 @@ const Projects = () => {
                   <Image
                     className="rounded-t-lg object-fill"
                     src={post.img}
-                    width="600"
-                    height="600"
+                    width="700"
+                    height="700"
                     alt={post.altImg}
                   />
                 </a>
@@ -81,7 +81,8 @@ const Projects = () => {
                   <p className="mb-3 font-normal text-gray-400">{post.desc}</p>
                   <motion.a
                     whileTap={{ scale: 0.85 }}
-                    href=""
+                    href={post.ref}
+                    target="_blank"
                     className="inline-flex items-center px-3 py-2 text-sm font-medium text-center rounded-lg bg-[#904edb] hover:bg-[#632f77] active:bg-[#7d3699] text-[#0d0e0d] hover:scale-105 transform transition duration-300"
                   >
                     Read more
