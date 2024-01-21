@@ -1,4 +1,5 @@
 import React from "react";
+import { useScreenSize } from "../utils/screensize";
 
 // Component for making rounded pulse on wallpaper
 export default function Pulse() {
@@ -14,6 +15,30 @@ export default function Pulse() {
       right: "right-[5%]",
       top: "top-[5%]",
       speed: "0.35",
+    },
+    {
+      bgColor: "bg-[#381050]",
+      right: "right-[45%]",
+      top: "top-[45%]",
+      speed: "0.2",
+    },
+    {
+      bgColor: "bg-[#7044b6]",
+      right: "right-[23%]",
+      top: "top-[23%]",
+      speed: "0.2",
+    },
+    {
+      bgColor: "bg-[#742961d8]",
+      right: "right-[45%]",
+      top: "top-[71%]",
+      speed: "0.35",
+    },
+    {
+      bgColor: "bg-[#7674f09f]",
+      right: "right-[60%]",
+      top: "top-[65%]",
+      speed: "0.3",
     },
     {
       bgColor: "bg-[#381050]",
@@ -58,12 +83,6 @@ export default function Pulse() {
       speed: "0.2",
     },
     {
-      bgColor: "bg-[#7044b6]",
-      right: "right-[23%]",
-      top: "top-[23%]",
-      speed: "0.2",
-    },
-    {
       bgColor: "bg-[#742961d8]",
       right: "right-[30%]",
       top: "top-[30%]",
@@ -100,12 +119,6 @@ export default function Pulse() {
       speed: "0.35",
     },
     {
-      bgColor: "bg-[#381050]",
-      right: "right-[45%]",
-      top: "top-[45%]",
-      speed: "0.2",
-    },
-    {
       bgColor: "bg-[#7674f09f]",
       right: "right-[70%]",
       top: "top-[50%]",
@@ -124,12 +137,6 @@ export default function Pulse() {
       speed: "0.2",
     },
     {
-      bgColor: "bg-[#7674f09f]",
-      right: "right-[60%]",
-      top: "top-[65%]",
-      speed: "0.3",
-    },
-    {
       bgColor: "bg-[#381050]",
       right: "right-[83%]",
       top: "top-[67%]",
@@ -146,12 +153,6 @@ export default function Pulse() {
       right: "right-[9%]",
       top: "top-[71%]",
       speed: "0.2",
-    },
-    {
-      bgColor: "bg-[#742961d8]",
-      right: "right-[45%]",
-      top: "top-[71%]",
-      speed: "0.35",
     },
     {
       bgColor: "bg-[#7674f09f]",
@@ -185,9 +186,12 @@ export default function Pulse() {
     },
   ];
 
+  const screenSize = useScreenSize();
+  const elementsToRender = screenSize ? pulseData.length : 8;
+
   return (
     <>
-      {pulseData.map((data, index) => (
+       {pulseData.slice(0, elementsToRender).map((data, index) => (
         <div
           key={index}
           data-scroll
