@@ -1,5 +1,6 @@
 "use client";
 import React, { useEffect, useRef } from "react";
+import Image from "next/image";
 import { useScreenSize } from "../utils/screensize";
 import Typed from "typed.js";
 import { motion } from "framer-motion";
@@ -51,7 +52,7 @@ const Profile: React.FC = () => {
               !screenSize ? "pt-4 pb-12" : "hidden"
             }`}
           >
-            <img
+            <Image
               src="/Profile/tristan.png"
               width="300"
               height="400"
@@ -182,7 +183,7 @@ const Profile: React.FC = () => {
       </div>
       <div>
         <div className="">
-          <img
+          <Image
             src="/Profile/tristan.png"
             width="1400"
             height="1200"

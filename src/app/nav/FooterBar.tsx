@@ -1,4 +1,5 @@
 import React from "react";
+import Image from "next/image";
 import { useScreenSize } from "../utils/screensize";
 import Magnetic from "../utils/magnetic";
 
@@ -65,7 +66,7 @@ export default function FooterBar() {
             <div className="justify-end ml-36 mr-48">
               <div className="flex items-center">
                 <Magnetic>
-                  <img
+                  <Image
                     src="/Profile/tristan2.jpg"
                     width="100"
                     height="100"
@@ -80,7 +81,7 @@ export default function FooterBar() {
                 </div>
               </div>
               <p className="pr-4 text-justify">
-                Let's paint the stars among our future web projects. Together,
+                Let&apos;s paint the stars among our future web projects. Together,
                 we embark on a celestial voyage, crafting websites that leave an
                 indelible mark on the ever-evolving tapestry of the internet.
               </p>

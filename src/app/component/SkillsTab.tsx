@@ -1,5 +1,6 @@
 "use client";
 import React, { useState } from "react";
+import Image from "next/image";
 import { Tab } from "@headlessui/react";
 import { useScreenSize } from "../utils/screensize";
 import { motion } from "framer-motion";
@@ -178,7 +179,7 @@ const Tables: React.FC = () => {
                     transition={imageTransition}
                   >
                     <div className="p-4 flex flex-col items-center space-y-4 grayscale hover:grayscale-0 hover:scale-110 ease-in-out duration-500">
-                      <img
+                      <Image
                         src={post.img}
                         width={imgWidht}
                         height={imgWidht}

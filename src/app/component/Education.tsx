@@ -51,7 +51,7 @@ const Education = () => {
                         University of Indonesia
                       </h1>
                       <p className="sm:text-sm text-xs pb-4 text-[#c9d6d6]">
-                        Bachelor's degree of Computer Science <br />
+                        Bachelor&apos;s degree of Computer Science <br />
                         2023-Present
                       </p>
                     </div>
@@ -87,7 +87,7 @@ const Education = () => {
                         University of Indonesia
                       </h1>
                       <p className="sm:text-sm text-xs pb-4 text-[#c9d6d6]">
-                        Bachelor's degree of Computer Science <br />
+                        Bachelor&apos;s degree of Computer Science <br />
                         2023-Present
                       </p>
                     </div>

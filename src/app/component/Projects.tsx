@@ -1,5 +1,6 @@
 "use client";
 import React, { useState } from "react";
+import Image from "next/image";
 import { useScreenSize } from "../utils/screensize";
 import { motion } from "framer-motion";
 import Skills from "./Skills";
@@ -60,11 +61,11 @@ const Projects = () => {
                 className="bg-gradient-to-br from-[#4625581a] to-[#7c419e21] border border-gray-200 rounded-lg shadow dark:border-gray-700"
               >
                 <a href="#">
-                  <img
+                  <Image
                     className="rounded-t-lg object-fill"
                     src={post.img}
-                    width="100%"
-                    height="100%"
+                    width="600"
+                    height="600"
                     alt={post.altImg}
                   />
                 </a>
