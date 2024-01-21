@@ -41,7 +41,7 @@ const Profile: React.FC = () => {
       <div>
         <div className="mt-24 px-8">
           <h1 className={`${h1Format} font-semibold pb-8`}>
-            Greetings! I'm{" "}
+            Greetings! I&apos;m{" "}
             <span className="text-[#904edb]">Tristan Agra Yudhistira</span>
           </h1>
           <h2 className={`${h2Format} pb-8 font-bold`}>
