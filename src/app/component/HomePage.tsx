@@ -1,17 +1,17 @@
 "use client";
-import { useScreenSize } from "./utils/screensize";
+import { useScreenSize } from "../utils/screensize";
 import React, { useEffect, useState } from "react";
-import Profile from "./component/Profile";
-import Experience from "./component/Experience";
-import Education from "./component/Education";
+import Profile from "./Profile";
+import Experience from "./Experience";
+import Education from "./Education";
 import { AnimatePresence } from "framer-motion";
 import { usePathname } from "next/navigation";
-import Nav from "./nav/BurgerBar";
+import Nav from "../nav/BurgerBar";
 import styles from "./navstyle.module.scss";
-import Magnetic from "./utils/magnetic";
-import Projects from "./component/Projects";
-import ContactMe from "./component/SendEmail";
-import Pulse from "./component/WallPulse";
+import Magnetic from "../utils/magnetic";
+import Projects from "./Projects";
+import ContactMe from "./SendEmail";
+import Pulse from "./WallPulse";
 import AOS from "aos";
 import "aos/dist/aos.css";
 
@@ -43,14 +43,15 @@ const Cards: React.FC<Section> = ({ component: Component, behaviour, id }) => (
 );
 
 const HomePage: React.FC = () => {
-  useEffect(() => { // useEffect for transition onscroll using AOS library
-    if (typeof window !== 'undefined') {
-    AOS.init({
-      delay: 0,
-      duration: 600,
-      disable: "mobile",
-    });
-  }
+  useEffect(() => {
+    // useEffect for transition onscroll using AOS library
+    if (typeof window !== "undefined") {
+      AOS.init({
+        delay: 0,
+        duration: 600,
+        disable: "mobile",
+      });
+    }
   }, []);
   // Styling the component based on screensize
   const defaultMX = useScreenSize() ? "mx-52" : "mx-8";
@@ -70,38 +71,38 @@ const HomePage: React.FC = () => {
   // For closing the nav if on profile section
   const [isProfileVisible, setIsProfileVisible] = useState(false);
   useEffect(() => {
-    if (typeof window !== 'undefined') {
-    const profileContainer = document.getElementById("profile-container");
+    if (typeof window !== "undefined") {
+      const profileContainer = document.getElementById("profile-container");
 
-    if (profileContainer) {
-      const observer = new IntersectionObserver(
-        (entries) => {
-          entries.forEach((entry) => {
-            if (entry.isIntersecting) {
-              setIsProfileVisible(true);
-            } else {
-              setIsProfileVisible(false);
-            }
-          });
-        },
-        { threshold: 0.8 }
-      );
+      if (profileContainer) {
+        const observer = new IntersectionObserver(
+          (entries) => {
+            entries.forEach((entry) => {
+              if (entry.isIntersecting) {
+                setIsProfileVisible(true);
+              } else {
+                setIsProfileVisible(false);
+              }
+            });
+          },
+          { threshold: 0.8 }
+        );
 
-      observer.observe(profileContainer);
+        observer.observe(profileContainer);
 
-      return () => {
-        observer.disconnect();
-      };
+        return () => {
+          observer.disconnect();
+        };
+      }
     }
-  }
   }, []);
 
   useEffect(() => {
-    if (typeof window !== 'undefined') {
-    if (isProfileVisible && isActive) {
-      setIsActive(false);
+    if (typeof window !== "undefined") {
+      if (isProfileVisible && isActive) {
+        setIsActive(false);
+      }
     }
-  }
   }, [isProfileVisible, isActive]);
 
   return (
