@@ -23,7 +23,7 @@ const Projects = () => {
   const formatH1 = screenSize ? "text-4xl" : "text-2xl";
   const adjustGrid = screenSize ? "grid-cols-2" : "grid-cols-1";
   const defaultMX = useScreenSize() ? "mx-24" : "mx-auto";
-  
+
   // Data for image and desc of project
   const [categories] = useState<Categories>({
     project1: [
@@ -63,7 +63,7 @@ const Projects = () => {
                 key={post.id}
                 className="bg-gradient-to-br from-[#4625581a] to-[#7c419e21] border border-gray-200 rounded-lg shadow dark:border-gray-700"
               >
-                <a href={post.ref}>
+                <a href={post.ref} target="_blank">
                   <Image
                     className="rounded-t-lg object-fill"
                     src={post.img}
@@ -73,7 +73,7 @@ const Projects = () => {
                   />
                 </a>
                 <div className="p-5">
-                  <a href={post.ref}>
+                  <a href={post.ref} target="_blank">
                     <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
                       {post.altImg}
                     </h5>
