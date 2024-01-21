@@ -1,6 +1,6 @@
 "use client";
 import Head from "next/head";
-import HomePage from "./component/HomePage";
+import HomePage from "./HomePage";
 import React, { useEffect } from "react";
 import { ReactLenis } from "@studio-freight/react-lenis";
 import NavTop from "./nav/NavBar";

@@ -1,17 +1,17 @@
 "use client";
-import { useScreenSize } from "../utils/screensize";
+import { useScreenSize } from "./utils/screensize";
 import React, { useEffect, useState } from "react";
-import Profile from "./Profile";
-import Experience from "./Experience";
-import Education from "./Education";
+import Profile from "./component/Profile";
+import Experience from "./component/Experience";
+import Education from "./component/Education";
 import { AnimatePresence } from "framer-motion";
 import { usePathname } from "next/navigation";
-import Nav from "../nav/BurgerBar";
+import Nav from "./nav/BurgerBar";
 import styles from "./navstyle.module.scss";
-import Magnetic from "../utils/magnetic";
-import Projects from "./Projects";
-import ContactMe from "./SendEmail";
-import Pulse from "./WallPulse";
+import Magnetic from "./utils/magnetic";
+import Projects from "./component/Projects";
+import ContactMe from "./component/SendEmail";
+import Pulse from "./component/WallPulse";
 import AOS from "aos";
 import "aos/dist/aos.css";
 
