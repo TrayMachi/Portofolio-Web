@@ -78,7 +78,7 @@ const Projects = () => {
                       {post.altImg}
                     </h5>
                   </a>
-                  <p className="mb-3 font-normal text-gray-400">{post.desc}</p>
+                  <p className="mb-3 font-normal text-gray-400 text-justify">{post.desc}</p>
                   <motion.a
                     whileTap={{ scale: 0.85 }}
                     href={post.ref}
