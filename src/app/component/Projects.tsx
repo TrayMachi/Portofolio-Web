@@ -61,7 +61,7 @@ const Projects = () => {
             categories[category].map((post) => (
               <div
                 key={post.id}
-                className="bg-gradient-to-br from-[#4625581a] to-[#7c419e21] border border-gray-200 rounded-lg shadow dark:border-gray-700"
+                className="bg-gradient-to-br from-[#4625581a] to-[#7c419e21] border rounded-lg shadow border-gray-700"
               >
                 <a href={post.ref} target="_blank">
                   <Image
@@ -74,7 +74,7 @@ const Projects = () => {
                 </a>
                 <div className="p-5">
                   <a href={post.ref} target="_blank">
-                    <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
+                    <h5 className="mb-2 text-2xl font-bold tracking-tight text-white">
                       {post.altImg}
                     </h5>
                   </a>
