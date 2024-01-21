@@ -1,5 +1,4 @@
 "use client";
-import Head from "next/head";
 import HomePage from "./component/HomePage";
 import React, { useEffect } from "react";
 import { ReactLenis } from "@studio-freight/react-lenis";
@@ -19,11 +18,6 @@ export default function Home() {
   }, []);
   return (
     <ReactLenis root>
-      <Head>
-        <meta property="og:title" content="Tristan's Portofolio" />
-        <meta property="og:image" content="/Preview.png" />
-        <meta name="twitter:card" content="summary" />
-      </Head>
       <LoadingScreen />
       <NavTop />
       <main className="relative overflow-hidden ">
