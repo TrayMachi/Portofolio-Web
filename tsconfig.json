@@ -22,6 +22,14 @@
       "@/*": ["./src/*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
+  "include": [
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    ".next/types/**/*.ts",
+    "src/app/homepagev2.js",
+    "src/app/starting/about.jsx",
+    "src/app/starting/intro.tsx"
+, "src/app/nav/Animation.js"  ],
   "exclude": ["node_modules"]
 }
