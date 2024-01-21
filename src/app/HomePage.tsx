@@ -67,12 +67,6 @@ const HomePage: React.FC = () => {
     }, 2800);
   };
 
-  useEffect(() => {
-    if (typeof window !== 'undefined') {
-    if (isActive) setIsActive(false);
-    }
-  }, [pathname]);
-
   // For closing the nav if on profile section
   const [isProfileVisible, setIsProfileVisible] = useState(false);
   useEffect(() => {
