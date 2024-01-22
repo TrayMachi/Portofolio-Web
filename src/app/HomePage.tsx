@@ -10,7 +10,6 @@ import styles from "./navstyle.module.scss";
 import Magnetic from "./utils/magnetic";
 import Projects from "./component/Projects";
 import ContactMe from "./component/SendEmail";
-import FooterBar from "./nav/FooterBar";
 import Pulse from "./component/WallPulse";
 import AOS from "aos";
 import "aos/dist/aos.css";
@@ -69,11 +68,9 @@ const HomePage: React.FC = () => {
 
   // For closing the nav if on profile section and footer
   const [isProfileVisible, setIsProfileVisible] = useState(false);
-  const [isFooterVisible, setIsFooterVisible] = useState(false);
   useEffect(() => {
     if (typeof window !== "undefined") {
       const profileContainer = document.getElementById("profile-container");
-      const footerContainer = document.getElementById("footer-container");
 
       if (profileContainer) {
         const observer = new IntersectionObserver(
@@ -81,10 +78,8 @@ const HomePage: React.FC = () => {
             entries.forEach((entry) => {
               if (entry.isIntersecting) {
                 setIsProfileVisible(true);
-                setIsFooterVisible(true);
               } else {
                 setIsProfileVisible(false);
-                setIsFooterVisible(false);
               }
             });
           },
@@ -92,10 +87,6 @@ const HomePage: React.FC = () => {
         );
         if (profileContainer) {
           observer.observe(profileContainer);
-        }
-
-        if (footerContainer) {
-          observer.observe(footerContainer);
         }
 
         return () => {
@@ -107,11 +98,11 @@ const HomePage: React.FC = () => {
 
   useEffect(() => {
     if (typeof window !== "undefined") {
-      if ((isProfileVisible || isFooterVisible) && isActive) {
+      if (isProfileVisible && isActive) {
         setIsActive(false);
       }
     }
-  }, [isProfileVisible, isFooterVisible, isActive]);
+  }, [isProfileVisible, isActive]);
 
   return (
     <>
@@ -159,9 +150,6 @@ const HomePage: React.FC = () => {
           >
             <ContactMe />
           </div>
-        </div>
-        <div id="footer-container">
-          <FooterBar />
         </div>
       </div>
       <AnimatePresence mode="wait">

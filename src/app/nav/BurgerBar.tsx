@@ -48,7 +48,7 @@ const Index: React.FC<NavProps> = ({ onClose }) => {
       initial="initial"
       animate="enter"
       exit="exit"
-      className={`h-screen ${navWidht} bg-[#1c0e2c9a] backdrop-blur-md fixed right-0 top-0 text-white`}
+      className={`h-screen ${navWidht} bg-[#1c0e2c9a] backdrop-blur-md fixed right-0 top-0 text-white z-[500]`}
     >
       <div
         className={`box-border h-full px-[70px] ${navPady} flex flex-col justify-between`}

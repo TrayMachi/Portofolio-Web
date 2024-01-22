@@ -23,7 +23,7 @@ const NavLink: React.FC<{ href: string; children: string }> = ({
 
 export default function NavTop() {
   return (
-    <div className="relative z-[50]">
+    <div className="relative z-[700]">
       <div className="absolute top-0 w-full p-5 text-white z-10">
         {useScreenSize() ? (
           <div className="flex items-center justify-between">
