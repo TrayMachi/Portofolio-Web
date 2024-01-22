@@ -21,7 +21,7 @@ export default function Home() {
     <ReactLenis root>
       <Head>
         <title>Tristan's Portofolio</title>
-        <meta name="title" content="Tristan's Portofolio" />
+        <meta name="title" content="Tristan&apos;s Portofolio" />
         <meta name="description" content="A Portofolio Website" />
 
         {/* Open Graph / Facebook */}
