@@ -27,7 +27,7 @@ export default function Home() {
         {/* Open Graph / Facebook */}
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://tristan-agra.vercel.app/" />
-        <meta property="og:title" content="Tristan's Portofolio" />
+        <meta property="og:title" content="Tristan&apos;s Portofolio" />
         <meta property="og:description" content="A Portofolio Website" />
         <meta
           property="og:image"
@@ -39,7 +39,7 @@ export default function Home() {
           property="twitter:url"
           content="https://tristan-agra.vercel.app/"
         />
-        <meta property="twitter:title" content="Tristan's Portofolio" />
+        <meta property="twitter:title" content="Tristan&apos;s Portofolio" />
         <meta property="twitter:description" content="A Portofolio Website" />
         <meta
           property="twitter:image"
