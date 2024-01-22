@@ -5,12 +5,12 @@ import Profile from "./component/Profile";
 import Experience from "./component/Experience";
 import Education from "./component/Education";
 import { AnimatePresence } from "framer-motion";
-import { usePathname } from "next/navigation";
 import Nav from "./nav/BurgerBar";
 import styles from "./navstyle.module.scss";
 import Magnetic from "./utils/magnetic";
 import Projects from "./component/Projects";
 import ContactMe from "./component/SendEmail";
+import FooterBar from "./nav/FooterBar";
 import Pulse from "./component/WallPulse";
 import AOS from "aos";
 import "aos/dist/aos.css";
@@ -61,18 +61,19 @@ const HomePage: React.FC = () => {
 
   // For closing the nav automaticaly
   const [isActive, setIsActive] = useState(false);
-  const pathname = usePathname();
   const closeNav = () => {
     setTimeout(() => {
       setIsActive(false);
     }, 2800);
   };
 
-  // For closing the nav if on profile section
+  // For closing the nav if on profile section and footer
   const [isProfileVisible, setIsProfileVisible] = useState(false);
+  const [isFooterVisible, setIsFooterVisible] = useState(false);
   useEffect(() => {
     if (typeof window !== "undefined") {
       const profileContainer = document.getElementById("profile-container");
+      const footerContainer = document.getElementById("footer-container");
 
       if (profileContainer) {
         const observer = new IntersectionObserver(
@@ -80,15 +81,22 @@ const HomePage: React.FC = () => {
             entries.forEach((entry) => {
               if (entry.isIntersecting) {
                 setIsProfileVisible(true);
+                setIsFooterVisible(true);
               } else {
                 setIsProfileVisible(false);
+                setIsFooterVisible(false);
               }
             });
           },
           { threshold: 0.8 }
         );
+        if (profileContainer) {
+          observer.observe(profileContainer);
+        }
 
-        observer.observe(profileContainer);
+        if (footerContainer) {
+          observer.observe(footerContainer);
+        }
 
         return () => {
           observer.disconnect();
@@ -99,11 +107,11 @@ const HomePage: React.FC = () => {
 
   useEffect(() => {
     if (typeof window !== "undefined") {
-      if (isProfileVisible && isActive) {
+      if ((isProfileVisible || isFooterVisible) && isActive) {
         setIsActive(false);
       }
     }
-  }, [isProfileVisible, isActive]);
+  }, [isProfileVisible, isFooterVisible, isActive]);
 
   return (
     <>
@@ -151,6 +159,9 @@ const HomePage: React.FC = () => {
           >
             <ContactMe />
           </div>
+        </div>
+        <div id="footer-container">
+          <FooterBar />
         </div>
       </div>
       <AnimatePresence mode="wait">

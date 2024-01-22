@@ -29,7 +29,6 @@ export default function Home() {
       <main className="relative overflow-hidden ">
         <HomePage />
       </main>
-      <FooterBar />
     </ReactLenis>
   );
 }
