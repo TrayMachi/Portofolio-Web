@@ -20,9 +20,31 @@ export default function Home() {
   return (
     <ReactLenis root>
       <Head>
+        <title>Tristan's Portofolio</title>
+        <meta name="title" content="Tristan's Portofolio" />
+        <meta name="description" content="A Portofolio Website" />
+
+        {/* Open Graph / Facebook */}
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://tristan-agra.vercel.app/" />
         <meta property="og:title" content="Tristan's Portofolio" />
-        <meta property="og:image" content="/Preview.png" />
-        <meta name="twitter:card" content="summary" />
+        <meta property="og:description" content="A Portofolio Website" />
+        <meta
+          property="og:image"
+          content="https://metatags.io/images/meta-tags.png"
+        />
+        {/* Twitter */}
+        <meta property="twitter:card" content="summary_large_image" />
+        <meta
+          property="twitter:url"
+          content="https://tristan-agra.vercel.app/"
+        />
+        <meta property="twitter:title" content="Tristan's Portofolio" />
+        <meta property="twitter:description" content="A Portofolio Website" />
+        <meta
+          property="twitter:image"
+          content="https://metatags.io/images/meta-tags.png"
+        />
       </Head>
       <LoadingScreen />
       <NavTop />
