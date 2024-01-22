@@ -57,7 +57,7 @@ const Index: React.FC<NavProps> = ({ onClose }) => {
           onMouseLeave={() => {
             setSelectedIndicator(pathname);
           }}
-          className="flex flex-col text-[56px] gap-3 mt-20"
+          className="flex flex-col text-[32px] md:text-[56px] gap-3 mt-20"
         >
           <div className="text-[#999999] border-b-[1px] border-[#999999] border-solid pb-2 uppercase text-[11px] mb-10">
             <p>Navigation</p>
