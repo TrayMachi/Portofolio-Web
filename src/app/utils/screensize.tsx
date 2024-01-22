@@ -8,7 +8,7 @@ const useScreenSize = (): boolean => {
   useEffect(() => {
     if (typeof window !== 'undefined') {
     const handleResize = () => {
-      setScreenSize(window.innerWidth > 1520);
+      setScreenSize(window.innerWidth > 1440);
     };
 
     handleResize(); 
