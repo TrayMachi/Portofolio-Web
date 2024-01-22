@@ -20,7 +20,7 @@ export default function Home() {
   return (
     <ReactLenis root>
       <Head>
-        <title>Tristan's Portofolio</title>
+        <title>Tristan&apos;s Portofolio</title>
         <meta name="title" content="Tristan&apos;s Portofolio" />
         <meta name="description" content="A Portofolio Website" />
 
