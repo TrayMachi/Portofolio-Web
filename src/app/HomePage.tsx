@@ -5,7 +5,7 @@ import Profile from "./component/Profile";
 import Experience from "./component/Experience";
 import Education from "./component/Education";
 import { AnimatePresence } from "framer-motion";
-import Nav from "./nav/BurgerBar";
+import Nav from "./nav/SideBar/BurgerBar";
 import styles from "./navstyle.module.scss";
 import Magnetic from "./utils/magnetic";
 import Projects from "./component/Projects";

@@ -5,7 +5,7 @@ import { menuSlide } from "./Animation";
 import Link from "./Link";
 import Curve from "./Curve";
 import Footer from "./Footer";
-import { useScreenSize } from "../utils/screensize";
+import { useScreenSize } from "../../utils/screensize";
 
 interface NavItem {
   title: string;

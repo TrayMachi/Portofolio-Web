@@ -9,7 +9,6 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@dhaiwat10/react-link-preview": "^1.15.0",
     "@emailjs/browser": "^3.12.1",
     "@headlessui/react": "^1.7.18",
     "@studio-freight/react-lenis": "^0.0.43",
