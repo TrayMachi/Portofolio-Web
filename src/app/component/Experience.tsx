@@ -7,6 +7,23 @@ const Experience = () => {
   const screenSize = useScreenSize();
   const h1Format = screenSize ? "text-4xl" : "text-2xl";
   const marginFormat = screenSize ? "my-16" : "my-8";
+  const data = [
+    {
+      header: screenSize ? "BEM Fakultas Ilmu Komputer Universitas Indonesia" : "BEM Fasilkom UI",
+      li: [
+        "Learnt Front-End Development.",
+        "Learnt how to work as team with GitHub.",
+        "Completed web project about food catalog."
+      ]
+    },
+    {
+      header: screenSize ? "RISTEK Fakultas Ilmu Komputer Universitas Indonesia" : "RISTEK Fasilkom UI",
+      li: [
+        "Learnt about Website including Reactjs, ExpressJs, MySQL.",
+        "Get insight of professionalism in Software Engineer."
+      ]
+    }
+  ];
 
   return (
     <div className="flex justify-center mx-auto items-center px-6 relative">
@@ -77,7 +94,6 @@ const Experience = () => {
                       </ul>
                     </div>
                   </div>
-                  <div className="col-span-4 w-full h-full"></div>
                 </>
               ) : (
                 <>
@@ -133,7 +149,6 @@ const Experience = () => {
                       </ul>
                     </div>
                   </div>
-                  <div className="col-span-4 w-full h-full"></div>
                 </>
               )}
             </div>
