@@ -75,7 +75,7 @@ const Profile: React.FC = () => {
           </p>
           <div className="flex justify-start mx-auto space-x-12">
             <a
-              href="https://drive.google.com/file/d/1Vng3zikGembDFXibmNwJDf3b7osV-4Va/view?usp=sharing"
+              href="https://drive.google.com/file/d/1NaaZhlGPjpFXoqznJhhYMfjx8JJyJuE7/view?usp=sharing"
               target="_blank"
             >
               <motion.button
