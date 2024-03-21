@@ -83,6 +83,11 @@ const Tables: React.FC = () => {
         altImg: "ExpressJs",
         img: "/Skills/expressjs.png",
       },
+      {
+        id: 4,
+        altImg: "NestJs",
+        img: "/Skills/nestjs.png",
+      },
     ],
     Libraries: [
       {
@@ -105,22 +110,32 @@ const Tables: React.FC = () => {
         altImg: "Styled Components",
         img: "/Skills/styledcomponents.png",
       },
+      {
+        id: 5,
+        altImg: "Shadcn UI",
+        img: "/Skills/shadcnui.png",
+      },
+      {
+        id: 6,
+        altImg: "GSAP",
+        img: "/Skills/gsap.png",
+      },
     ],
-    Etc: [
+    Database: [
       {
         id: 1,
-        altImg: "Vitejs",
-        img: "/Skills/vitejs.png",
+        altImg: "AppWrite",
+        img: "/Skills/appwrite.png",
       },
       {
         id: 2,
-        altImg: "Nodejs",
-        img: "/Skills/nodejs.png",
+        altImg: "Firebase",
+        img: "/Skills/firebase.png",
       },
       {
         id: 3,
-        altImg: "Git",
-        img: "/Skills/git.png",
+        altImg: "PostgreSQL",
+        img: "/Skills/postgresql.png",
       },
     ],
   });
@@ -184,7 +199,7 @@ const Tables: React.FC = () => {
                         width={imgWidht}
                         height={imgWidht}
                         alt={post.altImg}
-                        className=""
+                        className="w-100 h-100"
                       />
                       <h1
                         className={`${h1Format} text-[#c0c1c6] text-center font-semibold`}
