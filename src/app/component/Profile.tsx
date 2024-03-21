@@ -5,6 +5,8 @@ import { useScreenSize } from "../utils/screensize";
 import Typed from "typed.js";
 import { motion } from "framer-motion";
 import { FaInstagram } from "react-icons/fa";
+import ScrollLink from "./ScrollLink";
+import Magnetic from "../utils/magnetic";
 
 const Profile: React.FC = () => {
   // Change style based on screensize
@@ -16,23 +18,24 @@ const Profile: React.FC = () => {
 
   const career = useRef<HTMLSpanElement>(null);
 
-  useEffect(() => { // useEffect for making animation typing of career
-    if (typeof window !== 'undefined') {
-    if (career.current) {
-      const typed = new Typed(career.current, {
-        strings: ["Fullstack Developer.", "Computer Science Student."],
-        typeSpeed: 50,
-        backSpeed: 50,
-        backDelay: 500,
-        startDelay: 500,
-        loop: true,
-      });
+  useEffect(() => {
+    // useEffect for making animation typing of career
+    if (typeof window !== "undefined") {
+      if (career.current) {
+        const typed = new Typed(career.current, {
+          strings: ["Fullstack Developer.", "Computer Science Student."],
+          typeSpeed: 50,
+          backSpeed: 50,
+          backDelay: 500,
+          startDelay: 300,
+          loop: true,
+        });
 
-      return () => {
-        typed.destroy();
-      };
+        return () => {
+          typed.destroy();
+        };
+      }
     }
-  }
   }, []);
 
   return (
@@ -73,40 +76,52 @@ const Profile: React.FC = () => {
             comprehensive skill set that encompasses the entire spectrum of web
             development.
           </p>
-          <div className="flex justify-start mx-auto space-x-12">
-            <a
-              href="https://drive.google.com/file/d/1NaaZhlGPjpFXoqznJhhYMfjx8JJyJuE7/view?usp=sharing"
-              target="_blank"
-            >
+          <div className="flex justify-start mx-auto space-x-4">
+            <Magnetic>
+              <a
+                href="https://drive.google.com/file/d/1NaaZhlGPjpFXoqznJhhYMfjx8JJyJuE7/view?usp=sharing"
+                target="_blank"
+              >
+                <motion.button
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.9 }}
+                  transition={{ type: "spring", stiffness: 400, damping: 17 }}
+                  className="font-[550] bg-[#904edb] hover:bg-[#632f77] active:bg-[#7d3699] text-[#0d0e0d] h-12 w-36 md:w-44 rounded-xl"
+                >
+                  <ul className="flex space-x-1 items-center justify-center">
+                    <li>Download CV</li>
+                    <li>
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        style={{
+                          fill: "rgba(0, 0, 0, 1)",
+                          transform: "",
+                          msFilter: "",
+                        }}
+                      >
+                        <path d="M19 9h-4V3H9v6H5l7 8zM4 19h16v2H4z"></path>
+                      </svg>
+                    </li>
+                  </ul>
+                </motion.button>
+              </a>
+            </Magnetic>
+            <ScrollLink href="#Contact">
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.9 }}
                 transition={{ type: "spring", stiffness: 400, damping: 17 }}
-                className="font-[550] bg-[#904edb] hover:bg-[#632f77] active:bg-[#7d3699] text-[#0d0e0d] h-12 w-44 rounded-xl"
+                className="font-[550] bg-[#b33e95] hover:bg-[#832e6e] active:bg-[#fcd7f3] text-[#0d0e0d] h-12 w-36 md:w-44 rounded-xl"
               >
-                <ul className="flex space-x-1 items-center justify-center">
-                  <li>Download CV</li>
-                  <li>
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="24"
-                      height="24"
-                      viewBox="0 0 24 24"
-                      style={{
-                        fill: "rgba(0, 0, 0, 1)",
-                        transform: "",
-                        msFilter: "",
-                      }}
-                    >
-                      <path d="M19 9h-4V3H9v6H5l7 8zM4 19h16v2H4z"></path>
-                    </svg>
-                  </li>
-                </ul>
+                <p className="flex items-center justify-center">Contact Me!</p>
               </motion.button>
-            </a>
+            </ScrollLink>
           </div>
           <div>
-            <div className="flex items-center space-x-12 mx-auto py-12">
+            <div className="flex items-center justify-center md:justify-start space-x-12 mx-auto py-12">
               <motion.a
                 whileHover={{ scale: 1.25 }}
                 whileTap={{ scale: 0.9 }}
