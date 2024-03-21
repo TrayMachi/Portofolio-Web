@@ -1,25 +1,6 @@
 import React from "react";
-import Link from "next/link";
-import { ReactLenis, useLenis } from "@studio-freight/react-lenis";
 import { useScreenSize } from "../utils/screensize";
-import Magnetic from "../utils/magnetic";
-
-const NavLink: React.FC<{ href: string; children: string }> = ({
-  href,
-  children,
-}) => {
-  const lenis = useLenis(() => {});
-  const handleClick = () => {
-    lenis.scrollTo(href, { duration: 3 });
-  };
-  return (
-    <Magnetic>
-      <Link href={href} onClick={handleClick} className="hover:text-[#c9d6d6]">
-        {children}
-      </Link>
-    </Magnetic>
-  );
-};
+import ScrollLink from "../component/ScrollLink";
 
 export default function NavTop() {
   return (
@@ -33,12 +14,9 @@ export default function NavTop() {
 
             <nav>
               <ul className="flex space-x-8 font-medium">
-                <ReactLenis root>
-                  <NavLink href="#Experience">Experience</NavLink>
-
-                  <NavLink href="#Project">Project</NavLink>
-                  <NavLink href="#Contact">Contact</NavLink>
-                </ReactLenis>
+                <ScrollLink href="#Experience">Experience</ScrollLink>
+                <ScrollLink href="#Project">Project</ScrollLink>
+                <ScrollLink href="#Contact">Contact</ScrollLink>
               </ul>
             </nav>
           </div>
