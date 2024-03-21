@@ -3,6 +3,7 @@ import React, { useRef, FormEvent, useState } from "react";
 import emailjs from "@emailjs/browser";
 import { useScreenSize } from "../utils/screensize";
 import { motion } from "framer-motion";
+import { toast } from "sonner";
 
 // Component for container of sending email
 const ContactMe = () => {
@@ -50,6 +51,7 @@ const ContactMe = () => {
         )
         .then((result) => {
           console.log(result.text);
+          toast.success("Email sent successfully!");
         })
         .catch((error) => {
           console.log(error.text);
