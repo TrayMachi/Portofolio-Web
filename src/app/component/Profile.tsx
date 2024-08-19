@@ -7,6 +7,7 @@ import { motion } from "framer-motion";
 import { FaInstagram } from "react-icons/fa";
 import ScrollLink from "./ScrollLink";
 import Magnetic from "../utils/magnetic";
+import Link from "next/link";
 
 const Profile: React.FC = () => {
   // Change style based on screensize
@@ -78,8 +79,9 @@ const Profile: React.FC = () => {
           </p>
           <div className="flex justify-start mx-auto space-x-4">
             <Magnetic>
-              <a
-                href="https://drive.google.com/file/d/1NaaZhlGPjpFXoqznJhhYMfjx8JJyJuE7/view?usp=sharing"
+              <Link
+                href="/CV_TristanAgraYudhistira.pdf"
+                download="CV_TristanAgraYudhistira"
                 target="_blank"
               >
                 <motion.button
@@ -107,7 +109,7 @@ const Profile: React.FC = () => {
                     </li>
                   </ul>
                 </motion.button>
-              </a>
+              </Link>
             </Magnetic>
             <ScrollLink href="#Contact">
               <motion.button
