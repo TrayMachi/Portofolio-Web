@@ -7,27 +7,6 @@ const Experience = () => {
   const screenSize = useScreenSize();
   const h1Format = screenSize ? "text-4xl" : "text-2xl";
   const marginFormat = screenSize ? "my-16" : "my-8";
-  const data = [
-    {
-      header: screenSize
-        ? "BEM Fakultas Ilmu Komputer Universitas Indonesia"
-        : "BEM Fasilkom UI",
-      li: [
-        "Learnt Front-End Development.",
-        "Learnt how to work as team with GitHub.",
-        "Completed web project about food catalog.",
-      ],
-    },
-    {
-      header: screenSize
-        ? "RISTEK Fakultas Ilmu Komputer Universitas Indonesia"
-        : "RISTEK Fasilkom UI",
-      li: [
-        "Learnt about Website including Reactjs, ExpressJs, MySQL.",
-        "Get insight of professionalism in Software Engineer.",
-      ],
-    },
-  ];
 
   return (
     <div className="flex justify-center mx-auto items-center px-6 relative">
@@ -54,14 +33,21 @@ const Experience = () => {
                           : "BEM Fasilkom UI"}
                       </h1>
                       <p className="sm:text-sm text-xs pb-2 text-[#c9d6d6]">
-                        Intern Staff at Information Technology Development
-                        Department <br />
-                        Sep 2023 – Dec 2023
+                        Software Engineer Division at Business & Partnership{" "}
+                        <br />
+                        Jun 2024 – Present
                       </p>
                       <ul className="list-disc sm:text-sm text-xs text-[#c0c1c6] pl-4 pb-2">
-                        <li>Learnt Front-End Development.</li>
-                        <li>Learnt how to work as team with GitHub.</li>
-                        <li>Completed web project about food catalog.</li>
+                        <li>
+                          Developed a tailored website for an external client.
+                        </li>
+                        <li>
+                          Collaborated closely with the client to understand
+                          project requirements.
+                        </li>
+                        <li>
+                          Provided training and mentorship to BEM intern staff.
+                        </li>
                       </ul>
                     </div>
                   </div>
@@ -79,21 +65,26 @@ const Experience = () => {
                     <div className="w-full h-full bg-[#431c5052] rounded-xl p-2 md:pl-4">
                       <h1 className="text-[#98519e] text-xl py-2 font-bold">
                         {screenSize
-                          ? "RISTEK Fakultas Ilmu Komputer Universitas Indonesia"
-                          : "RISTEK Fasilkom UI"}
+                          ? "Open House Fakultas Ilmu Komputer Universitas Indonesia"
+                          : "Open House Fasilkom UI"}
                       </h1>
                       <p className="sm:text-sm text-xs pb-2 text-[#c9d6d6]">
-                        Participant of Pekan RISTEK Website Development Open
-                        Class <br />
-                        Nov 2023
+                        Software Engineer Expert Staff <br />
+                        Jul 2024 – Present
                       </p>
                       <ul className="list-disc sm:text-sm text-xs text-[#c0c1c6] pl-4 pb-2">
                         <li>
-                          Learnt about Website including Reactjs, ExpressJs,
-                          MySQL.
+                          Built and optimized a dynamic user interface using
+                          Next.js and Tanstack Query.
                         </li>
                         <li>
-                          Get insight of profesionalism in Software Engineer.
+                          Developed a website to introduce Fasilkom UI to the
+                          general public, expected to be viewed by over 800
+                          user.
+                        </li>
+                        <li>
+                          Managed the backend using Hono, Prisma ORM, and Neon
+                          for efficient and robust functionality
                         </li>
                       </ul>
                     </div>
@@ -101,30 +92,28 @@ const Experience = () => {
                   <div className="col-span-4 w-full h-full py-4">
                     <div className="w-full h-full bg-[#431c5052] rounded-xl p-4 md:pl-4">
                       <h1 className="text-[#98519e] text-xl pb-2 font-bold">
-                        {screenSize
-                          ? "Betis Fakultas Ilmu Komputer Universitas Indonesia"
-                          : "Betis Fasilkom UI"}
+                        {screenSize ? "BEM Universitas Indonesia" : "BEM UI"}
                       </h1>
                       <p className="sm:text-sm text-xs pb-2 text-[#c9d6d6]">
-                        Peer Tutor of “Penalaran Matematika”
+                        Software Engineer of Multimedia Bureau
                         <br />
-                        Jan 2024 – Present
+                        Mar 2024 – Present
                       </p>
                       <ul className="list-disc sm:text-sm text-xs text-[#c0c1c6] pl-4 pb-2">
                         <li>
-                          Tutored for the “Penalaran Matematika” subtest of
-                          Indonesia’s national exam for public university
-                          admission.
+                          Developed a Multi-Event Recruitment Platform “Sistem
+                          Perekrutan Terbuka” using Next.js, enabling multiple
+                          organizers to efficiently manage open recruitment for
+                          various events.
                         </li>
                         <li>
-                          Sharpened communication and leadership skills while
-                          guiding over 100 students through the learning
-                          process.
+                          Integrated Firebase NoSQL for robust data storage and
+                          real-time updates, ensuring a scalable and responsive
+                          user experience.
                         </li>
                         <li>
-                          Received positive feedback from students and
-                          supervisors for my professionalism and communication
-                          skills.
+                          Implemented a modern and intuitive user interface
+                          utilizing ShadCN and Framer Motion.
                         </li>
                       </ul>
                     </div>
@@ -132,6 +121,40 @@ const Experience = () => {
                   <div className="relative col-span-1 w-full h-full flex justify-center items-center">
                     <div className="h-full w-1 bg-[#712e8b] rounded-b-md"></div>
                     <div className="absolute w-5 h-5 rounded-full bg-[#782fa8] z-1"></div>
+                  </div>
+                  <div className="col-span-4 w-full h-full"></div>
+                  <div className="col-span-4 w-full h-full"></div>
+                  <div className="relative col-span-1 w-full h-full flex justify-center items-center">
+                    <div className="h-full w-1 bg-[#712e8b] rounded-b-md"></div>
+                    <div className="absolute w-5 h-5 rounded-full bg-[#782fa8] z-1"></div>
+                  </div>
+                  <div className="col-span-4 w-full h-full py-4">
+                    <div className="w-full h-full bg-[#431c5052] rounded-xl p-2 md:pl-4">
+                      <h1 className="text-[#98519e] text-xl py-2 font-bold">
+                        {screenSize
+                          ? "COMPFEST Fakultas Ilmu Komputer Universitas Indonesia"
+                          : "COMPFEST Fasilkom UI"}
+                      </h1>
+                      <p className="sm:text-sm text-xs pb-2 text-[#c9d6d6]">
+                        Software Engineer Staff <br />
+                        Apr 2024 – Present
+                      </p>
+                      <ul className="list-disc sm:text-sm text-xs text-[#c0c1c6] pl-4 pb-2">
+                        <li>
+                          Created a dynamic landing page for a playground map,
+                          showcasing points and tokens for shopping, enhancing
+                          user engagement with 1500+ daily visitors.
+                        </li>
+                        <li>
+                          Developed the frontend for a competition voting system
+                          using Next.js and Tailwind CSS.
+                        </li>
+                        <li>
+                          Implemented a backend system for team invitations via
+                          email using NestJS.
+                        </li>
+                      </ul>
+                    </div>
                   </div>
                 </>
               ) : (
@@ -148,14 +171,21 @@ const Experience = () => {
                           : "BEM Fasilkom UI"}
                       </h1>
                       <p className="sm:text-sm text-xs pb-2 text-[#c9d6d6]">
-                        Intern Staff at Information Technology Development
-                        Department <br />
-                        Sep 2023 – Dec 2023
+                        Software Engineer Division at Business & Partnership{" "}
+                        <br />
+                        Jun 2024 – Present
                       </p>
                       <ul className="list-disc sm:text-sm text-xs text-[#c0c1c6] pl-4">
-                        <li>Learnt Front-End Development.</li>
-                        <li>Learnt how to work as team with GitHub.</li>
-                        <li>Completed web project about food catalog.</li>
+                        <li>
+                          Developed a tailored website for an external client.
+                        </li>
+                        <li>
+                          Collaborated closely with the client to understand
+                          project requirements.
+                        </li>
+                        <li>
+                          Provided training and mentorship to BEM intern staff.
+                        </li>
                       </ul>
                     </div>
                   </div>
@@ -169,21 +199,26 @@ const Experience = () => {
                     <div className="w-60 h-full bg-[#431c5052] rounded-xl p-2 md:pl-4">
                       <h1 className="text-[#98519e] text-xl py-2 font-bold">
                         {screenSize
-                          ? "RISTEK Fakultas Ilmu Komputer Universitas Indonesia"
-                          : "RISTEK Fasilkom UI"}
+                          ? "Open House Fakultas Ilmu Komputer Universitas Indonesia"
+                          : "Open House Fasilkom UI"}
                       </h1>
                       <p className="sm:text-sm text-xs pb-2 text-[#c9d6d6]">
-                        Participant of Pekan RISTEK Website Development Open
-                        Class <br />
-                        Nov 2023
+                        Software Engineer Expert Staff <br />
+                        Jul 2024 – Present
                       </p>
                       <ul className="list-disc sm:text-sm text-xs text-[#c0c1c6] pl-4 pb-2">
                         <li>
-                          Learnt about Website including Reactjs, ExpressJs,
-                          MySQL.
+                          Built and optimized a dynamic user interface using
+                          Next.js and Tanstack Query.
                         </li>
                         <li>
-                          Get insight of profesionalism in Software Engineer.
+                          Developed a website to introduce Fasilkom UI to the
+                          general public, expected to be viewed by over 800
+                          user.
+                        </li>
+                        <li>
+                          Managed the backend using Hono, Prisma ORM, and Neon
+                          for efficient and robust functionality
                         </li>
                       </ul>
                     </div>
@@ -195,31 +230,62 @@ const Experience = () => {
                   </div>
                   <div className="col-span-4 w-full h-full py-4">
                     <div className="w-60 h-full bg-[#431c5052] rounded-xl p-2 md:pl-4">
-                    <h1 className="text-[#98519e] text-xl pb-2 font-bold">
-                        {screenSize
-                          ? "Betis Fakultas Ilmu Komputer Universitas Indonesia"
-                          : "Betis Fasilkom UI"}
+                      <h1 className="text-[#98519e] text-xl pb-2 font-bold">
+                        {screenSize ? "BEM Universitas Indonesia" : "BEM UI"}
                       </h1>
                       <p className="sm:text-sm text-xs pb-2 text-[#c9d6d6]">
-                        Peer Tutor of “Penalaran Matematika”
+                        Software Engineer of Multimedia Bureau
                         <br />
-                        Jan 2024 – Present
+                        Mar 2024 – Present
                       </p>
                       <ul className="list-disc sm:text-sm text-xs text-[#c0c1c6] pl-4 pb-2">
                         <li>
-                          Tutored for the “Penalaran Matematika” subtest of
-                          Indonesia’s national exam for public university
-                          admission.
+                          Developed a Multi-Event Recruitment Platform “Sistem
+                          Perekrutan Terbuka” using Next.js, enabling multiple
+                          organizers to efficiently manage open recruitment for
+                          various events.
                         </li>
                         <li>
-                          Sharpened communication and leadership skills while
-                          guiding over 100 students through the learning
-                          process.
+                          Integrated Firebase NoSQL for robust data storage and
+                          real-time updates, ensuring a scalable and responsive
+                          user experience.
                         </li>
                         <li>
-                          Received positive feedback from students and
-                          supervisors for my professionalism and communication
-                          skills.
+                          Implemented a modern and intuitive user interface
+                          utilizing ShadCN and Framer Motion.
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div className="col-span-4 w-full h-full"></div>
+                  <div className="relative col-span-1 w-full h-full flex justify-center items-center">
+                    <div className="h-full w-1 bg-[#712e8b] rounded-b-md"></div>
+                    <div className="absolute w-5 h-5 rounded-full bg-[#782fa8] z-1"></div>
+                  </div>
+                  <div className="col-span-4 w-full h-full py-4">
+                    <div className="w-60 h-full bg-[#431c5052] rounded-xl p-2 md:pl-4">
+                      <h1 className="text-[#98519e] text-xl pb-2 font-bold">
+                        {screenSize
+                          ? "COMPFEST Fakultas Ilmu Komputer Universitas Indonesia"
+                          : "COMPFEST Fasilkom UI"}
+                      </h1>
+                      <p className="sm:text-sm text-xs pb-2 text-[#c9d6d6]">
+                        Software Engineer Staff <br />
+                        Apr 2024 – Present
+                      </p>
+                      <ul className="list-disc sm:text-sm text-xs text-[#c0c1c6] pl-4 pb-2">
+                        <li>
+                          Created a dynamic landing page for a playground map,
+                          showcasing points and tokens for shopping, enhancing
+                          user engagement with 1500+ daily visitors.
+                        </li>
+                        <li>
+                          Developed the frontend for a competition voting system
+                          using Next.js and Tailwind CSS.
+                        </li>
+                        <li>
+                          Implemented a backend system for team invitations via
+                          email using NestJS.
                         </li>
                       </ul>
                     </div>
